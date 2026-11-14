@@ -1,0 +1,5 @@
+# chug
+
+```sh
+cargo run
+```
