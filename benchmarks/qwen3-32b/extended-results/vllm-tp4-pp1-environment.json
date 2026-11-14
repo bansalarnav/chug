@@ -1,0 +1,14 @@
+{
+  "CUDA_HOME": null,
+  "CUDA_VISIBLE_DEVICES": "0,1,2,3",
+  "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+  "OMP_NUM_THREADS": "4",
+  "HF_HOME": "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/huggingface",
+  "XDG_CACHE_HOME": "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache",
+  "TRITON_CACHE_DIR": "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/triton",
+  "CUDA_CACHE_PATH": "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/cuda",
+  "PATH": "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/bin:/home/arnavb9/.local/bin:/home/arnavb9/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin",
+  "LIBRARY_PATH": null,
+  "MAX_JOBS": "4",
+  "FLASHINFER_WORKSPACE_BASE": "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline"
+}

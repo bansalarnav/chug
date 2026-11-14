@@ -1,0 +1,32 @@
+{
+  "id": "cmpl-84cf774cba6d6a5d",
+  "object": "text_completion",
+  "created": 1794595968,
+  "model": "qwen3-32b",
+  "choices": [
+    {
+      "index": 0,
+      "text": "4",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "routed_experts": null,
+      "weight_versions": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.33.0-tp4-c9d002fd",
+  "usage": {
+    "prompt_tokens": 26,
+    "total_tokens": 28,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": null
+  },
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

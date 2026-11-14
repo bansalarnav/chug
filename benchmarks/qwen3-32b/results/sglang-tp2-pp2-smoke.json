@@ -1,0 +1,33 @@
+{
+  "id": "a776ce5c7f894c9aa7ede87b2f96804d",
+  "object": "text_completion",
+  "created": 1794600088,
+  "model": "qwen3-32b",
+  "choices": [
+    {
+      "index": 0,
+      "text": "4",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "matched_stop": 151645
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 26,
+    "total_tokens": 28,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "completion_tokens_details": null
+  },
+  "metadata": {
+    "weight_version": "default",
+    "weight_versions": [
+      {
+        "version": "default",
+        "start": 0,
+        "end": 2
+      }
+    ]
+  }
+}

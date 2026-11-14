@@ -1,0 +1,72 @@
+[
+  {
+    "time": 1794609512.8816924,
+    "microbatch_cap": 1,
+    "response": [
+      true
+    ]
+  },
+  {
+    "time": 1794609579.4721403,
+    "microbatch_cap": 2,
+    "response": [
+      true
+    ]
+  },
+  {
+    "time": 1794609613.849536,
+    "microbatch_cap": 4,
+    "response": [
+      true
+    ]
+  },
+  {
+    "time": 1794609648.3575559,
+    "microbatch_cap": 8,
+    "response": [
+      true
+    ]
+  },
+  {
+    "time": 1794609682.8762074,
+    "microbatch_cap": 16,
+    "response": [
+      true
+    ]
+  },
+  {
+    "time": 1794609717.3259716,
+    "microbatch_cap": 8,
+    "response": [
+      true
+    ]
+  },
+  {
+    "time": 1794609754.7787697,
+    "microbatch_cap": 16,
+    "response": [
+      true
+    ]
+  },
+  {
+    "time": 1794609792.773313,
+    "microbatch_cap": 2,
+    "response": [
+      true
+    ]
+  },
+  {
+    "time": 1794609805.804848,
+    "microbatch_cap": 16,
+    "response": [
+      true
+    ]
+  },
+  {
+    "time": 1794609822.9058235,
+    "microbatch_cap": 16,
+    "response": [
+      true
+    ]
+  }
+]

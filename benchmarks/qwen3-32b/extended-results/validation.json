@@ -1,0 +1,18 @@
+{
+  "serving_cases": 123,
+  "measured_requests": 3148,
+  "main_trials": 364,
+  "microbatch_trials": 21,
+  "communication_cases": 44,
+  "smoke_checks_passed": 4,
+  "sha256": {
+    "validated-summary.json": "5f6caaf559b41e520403478a332ca82545b41474de7e75be827ca0e50439a8ab",
+    "validated-pipeline-summary.json": "c8f527f92876d877f64dc10af1d9531980a8a6b20b2d1f51d6cebc6432995d5e",
+    "corpus.json": "3ab8e3255afac657b33846e81ad497580c56ecbffd0aca32276802fcf2e24a96",
+    "summary.csv": "c86baacae8a36aa9831cb050e91c746cdb9f98ef64300bd2afbb62d8ecbc4f00",
+    "pipeline-summary.csv": "4636f13de229ab7dbe6e0d4aa491ac989f39adaafd19e1a0bb495a6d28286a27",
+    "communication.json": "d4416faa437198a0f40f853e84048d739000bbcdf58cbce65a328e049ab69cd7",
+    "communication-graph.json": "8752f42da820fa9129e9e884d6dc931017671451a4b2e5a5310ef31489907463",
+    "profile-groups.json": "4585763415d9e88a5770df0c95a49ad36ec65bf298a9b27e01bf90e82d87f552"
+  }
+}

@@ -1,0 +1,191 @@
+W1113 12:32:28.313000 1676098 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1113 12:32:28.313000 1676098 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1113 12:32:28.314000 1676098 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py:24: DeprecationWarning: `vllm.entrypoints.openai.api_server` is deprecated and will likely beunsupported in a future version. Use the corresponding function from `vllm.entrypoints.launchers` instead.
+  warnings.warn(
+/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py:51: DeprecationWarning: The `python -m vllm.entrypoints.openai.api_server` command is deprecated and may be removed in a future release. Please use `vllm server` instead.
+  warnings.warn(
+(APIServer pid=1676098) INFO 11-13 12:33:02 [startup.py:38] 
+(APIServer pid=1676098) INFO 11-13 12:33:02 [startup.py:38]        █     █     █▄   ▄█
+(APIServer pid=1676098) INFO 11-13 12:33:02 [startup.py:38]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.33.0
+(APIServer pid=1676098) INFO 11-13 12:33:02 [startup.py:38]   █▄█▀ █     █     █     █  model   /srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/huggingface/hub/models--Qwen--Qwen3-32B/snapshots/9216db5781bf21249d130ec9da846c4624c16137
+(APIServer pid=1676098) INFO 11-13 12:33:02 [startup.py:38]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=1676098) INFO 11-13 12:33:02 [startup.py:38] 
+(APIServer pid=1676098) INFO 11-13 12:33:02 [startup.py:96] non-default args: {'host': '127.0.0.1', 'port': 18080, 'model': '/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/huggingface/hub/models--Qwen--Qwen3-32B/snapshots/9216db5781bf21249d130ec9da846c4624c16137', 'dtype': 'bfloat16', 'max_model_len': 4096, 'served_model_name': ['qwen3-32b'], 'generation_config': 'vllm', 'safetensors_load_strategy': 'prefetch', 'safetensors_prefetch_num_threads': 1, 'distributed_executor_backend': 'mp', 'tensor_parallel_size': 4, 'gpu_memory_utilization': 0.9, 'enable_prefix_caching': False, 'max_num_batched_tokens': 2048, 'max_num_seqs': 4, 'enable_chunked_prefill': True}
+(APIServer pid=1676098) INFO 11-13 12:33:16 [model.py:744] Resolved architecture: Qwen3ForCausalLM
+(APIServer pid=1676098) INFO 11-13 12:33:16 [model.py:2170] Using max model len 4096
+(APIServer pid=1676098) INFO 11-13 12:33:16 [kernel.py:480] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native'])
+W1113 12:33:27.577000 1676992 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1113 12:33:27.578000 1676992 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1113 12:33:27.578000 1676992 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+(EngineCore pid=1676992) INFO 11-13 12:33:35 [core.py:139] Initializing a V1 LLM engine (v0.33.0) with config: model='/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/huggingface/hub/models--Qwen--Qwen3-32B/snapshots/9216db5781bf21249d130ec9da846c4624c16137', speculative_config=None, tokenizer='/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/huggingface/hub/models--Qwen--Qwen3-32B/snapshots/9216db5781bf21249d130ec9da846c4624c16137', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=4, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=False, aux_output_config=AuxOutputConfig(enable_return_routed_experts=False, max_bytes=None), kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, per_request_spec_decode_metrics='none', kv_cache_metrics=False, kv_cache_metrics_sample=0.01, custom_histogram_buckets=None, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=qwen3-32b, enable_prefix_caching=False, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'ir_enable_torch_wrap': True, 'splitting_ops': ['vllm::unified_attention_with_output', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::qwen4_exp_ple_short_conv', 'vllm::qwen4_exp_qsa_with_output', 'vllm::qwen4_exp_qsa_prepare_with_output', 'vllm::linear_attention', 'vllm::qwen_gdn_attention_core', 'vllm::qwen_gdn_attention_core_fused_norm_packed', 'vllm::gdn_attention_core_xpu', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::deepseek_v4_attention', 'vllm::hpc_rope_norm_forward', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'cudagraph_decoder_replay': True, 'decoder_replay_cudagraph_capture_sizes': [], 'decoder_replay_trim_threshold': 768, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 8, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native']), enable_flashinfer_autotune=True, enable_rocm_segmented_attn_autotune=False, enable_cutedsl_warmup=True, enable_jit_warmup=True, monokernel=False, moe_backend='auto', sparse_indexer_topk_backend='auto', linear_backend='auto', linear_backend_per_quant=None)
+(EngineCore pid=1676992) INFO 11-13 12:33:35 [multiproc_executor.py:167] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=127.0.0.1, mq_connect_ip=130.126.136.239 (local), world_size=4, local_world_size=4
+W1113 12:33:38.857000 1677102 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1113 12:33:38.857000 1677102 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1113 12:33:38.858000 1677102 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+W1113 12:33:38.858000 1677101 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1113 12:33:38.859000 1677101 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1113 12:33:38.860000 1677101 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+W1113 12:33:38.872000 1677099 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1113 12:33:38.873000 1677099 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1113 12:33:38.873000 1677099 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+W1113 12:33:38.879000 1677100 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1113 12:33:38.880000 1677100 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1113 12:33:38.880000 1677100 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+(Worker pid=1677099) INFO 11-13 12:34:50 [parallel_state.py:1929] world_size=4 rank=0 local_rank=0 distributed_init_method=file:///srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/tmp/vllm_dist_19cfb3dec69a4a5fae052bddfc802b6e backend=nccl
+(Worker pid=1677101) INFO 11-13 12:34:51 [parallel_state.py:1929] world_size=4 rank=3 local_rank=3 distributed_init_method=file:///srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/tmp/vllm_dist_19cfb3dec69a4a5fae052bddfc802b6e backend=nccl
+(Worker pid=1677102) INFO 11-13 12:34:51 [parallel_state.py:1929] world_size=4 rank=1 local_rank=1 distributed_init_method=file:///srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/tmp/vllm_dist_19cfb3dec69a4a5fae052bddfc802b6e backend=nccl
+(Worker pid=1677100) INFO 11-13 12:34:51 [parallel_state.py:1929] world_size=4 rank=2 local_rank=2 distributed_init_method=file:///srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/tmp/vllm_dist_19cfb3dec69a4a5fae052bddfc802b6e backend=nccl
+(Worker pid=1677099) INFO 11-13 12:35:24 [pynccl.py:148] vLLM is using nccl==2.30.7
+(Worker pid=1677099) WARNING 11-13 12:35:26 [symm_mem.py:67] SymmMemCommunicator: Device capability 8.6 not supported, communicator is not available.
+(Worker pid=1677100) WARNING 11-13 12:35:26 [symm_mem.py:67] SymmMemCommunicator: Device capability 8.6 not supported, communicator is not available.
+(Worker pid=1677101) WARNING 11-13 12:35:26 [symm_mem.py:67] SymmMemCommunicator: Device capability 8.6 not supported, communicator is not available.
+(Worker pid=1677102) WARNING 11-13 12:35:26 [symm_mem.py:67] SymmMemCommunicator: Device capability 8.6 not supported, communicator is not available.
+(Worker pid=1677100) WARNING 11-13 12:35:27 [flashinfer_all_reduce.py:424] FlashInfer All Reduce is disabled because it is not supported for world_size=4.
+(Worker pid=1677101) WARNING 11-13 12:35:27 [flashinfer_all_reduce.py:424] FlashInfer All Reduce is disabled because it is not supported for world_size=4.
+(Worker pid=1677102) WARNING 11-13 12:35:27 [flashinfer_all_reduce.py:424] FlashInfer All Reduce is disabled because it is not supported for world_size=4.
+(Worker pid=1677099) WARNING 11-13 12:35:27 [flashinfer_all_reduce.py:424] FlashInfer All Reduce is disabled because it is not supported for world_size=4.
+(Worker pid=1677102) WARNING 11-13 12:35:27 [custom_all_reduce.py:268] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(Worker pid=1677100) WARNING 11-13 12:35:27 [custom_all_reduce.py:268] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(Worker pid=1677101) WARNING 11-13 12:35:27 [custom_all_reduce.py:268] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(Worker pid=1677099) WARNING 11-13 12:35:27 [custom_all_reduce.py:268] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(Worker pid=1677099) INFO 11-13 12:35:27 [cuda_communicator.py:353] Using ['PYNCCL'] all-reduce backends (in dispatch order) for group 'tp:0' out of potential backends: ['FLASHINFER_PCIE_IPC', 'FLASHINFER', 'NCCL_SYMM_MEM', 'QUICK_REDUCE', 'AITER_CUSTOM', 'CUSTOM', 'SYMM_MEM', 'PYNCCL'].
+(Worker pid=1677099) INFO 11-13 12:35:27 [parallel_state.py:2385] rank 0 in world size 4 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, ETP rank 0, EP rank N/A, EPLB rank N/A
+(Worker pid=1677099) INFO 11-13 12:35:27 [gpu_worker.py:513] Using V2 Model Runner
+(Worker_TP0 pid=1677099) INFO 11-13 12:35:33 [model_runner.py:399] Loading model from scratch...
+(Worker_TP0 pid=1677099) INFO 11-13 12:35:38 [cuda.py:508] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(Worker_TP0 pid=1677099) INFO 11-13 12:35:38 [flash_attn.py:1122] Using FlashAttention version 2
+(Worker_TP0 pid=1677099) INFO 11-13 12:35:56 [base_loader.py:82] Initializing model took 23.480681 seconds
+(Worker_TP1 pid=1677102) INFO 11-13 12:35:56 [weight_utils.py:1106] Prefetching checkpoint files into page cache started (in background, num_threads=1, block_size=16777216 bytes)
+(Worker_TP3 pid=1677101) INFO 11-13 12:35:56 [weight_utils.py:1106] Prefetching checkpoint files into page cache started (in background, num_threads=1, block_size=16777216 bytes)
+(Worker_TP2 pid=1677100) INFO 11-13 12:35:56 [weight_utils.py:1106] Prefetching checkpoint files into page cache started (in background, num_threads=1, block_size=16777216 bytes)
+(Worker_TP0 pid=1677099) INFO 11-13 12:35:56 [weight_utils.py:1144] Filesystem type for checkpoints: XFS. Checkpoint size: 61.02 GiB. Available RAM: 71.96 GiB.
+(Worker_TP0 pid=1677099) INFO 11-13 12:35:56 [weight_utils.py:1106] Prefetching checkpoint files into page cache started (in background, num_threads=1, block_size=16777216 bytes)
+Loading safetensors checkpoint shards:   0% Completed | 0/17 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   6% Completed | 1/17 [01:22<22:01, 82.56s/it]
+(Worker_TP0 pid=1677099) INFO 11-13 12:37:19 [weight_utils.py:1078] Prefetching checkpoint files: 10% (1/5)
+Loading safetensors checkpoint shards:  12% Completed | 2/17 [02:36<19:23, 77.55s/it]
+(Worker_TP1 pid=1677102) INFO 11-13 12:38:34 [weight_utils.py:1078] Prefetching checkpoint files: 10% (1/4)
+(EngineCore pid=1676992) INFO 11-13 12:39:10 [core.py:1525] [shutdown] EngineCore: trigger received signal=SIGTERM
+(EngineCore pid=1676992) INFO 11-13 12:39:14 [multiproc_executor.py:580] [shutdown] Executor: waiting for worker exit count=4
+Loading safetensors checkpoint shards:  12% Completed | 2/17 [03:21<25:08, 100.56s/it]
+
+(EngineCore pid=1676992) WARNING 11-13 12:39:19 [multiproc_executor.py:592] [shutdown] Executor: workers still running after grace period; sending SIGTERM count=4
+(EngineCore pid=1676992) WARNING 11-13 12:39:23 [multiproc_executor.py:602] [shutdown] Executor: workers still running after SIGTERM; sending SIGKILL count=4
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584] EngineCore failed to start.
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584] Traceback (most recent call last):
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]   File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 1555, in run_engine_core
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]   File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]     return func(*args, **kwargs)
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]   File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 1232, in __init__
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]     super().__init__(
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]   File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 150, in __init__
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]     self.model_executor = executor_class(vllm_config)
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]   File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/executor/multiproc_executor.py", line 130, in __init__
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]     super().__init__(vllm_config)
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]   File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]     return func(*args, **kwargs)
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]   File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/executor/abstract.py", line 120, in __init__
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]     self._init_executor()
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]   File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/executor/multiproc_executor.py", line 238, in _init_executor
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]     self.workers = WorkerProc.wait_for_ready(unready_workers)
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]   File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/executor/multiproc_executor.py", line 916, in wait_for_ready
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584]     raise e from None
+(EngineCore pid=1676992) ERROR 11-13 12:39:23 [core.py:1584] Exception: WorkerProc initialization failed due to an exception in a background process. See stack trace for root cause.
+Process EngineCore:
+Traceback (most recent call last):
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 1588, in run_engine_core
+    raise e
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 1555, in run_engine_core
+    engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 1232, in __init__
+    super().__init__(
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 150, in __init__
+    self.model_executor = executor_class(vllm_config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/executor/multiproc_executor.py", line 130, in __init__
+    super().__init__(vllm_config)
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/executor/abstract.py", line 120, in __init__
+    self._init_executor()
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/executor/multiproc_executor.py", line 238, in _init_executor
+    self.workers = WorkerProc.wait_for_ready(unready_workers)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/executor/multiproc_executor.py", line 916, in wait_for_ready
+    raise e from None
+Exception: WorkerProc initialization failed due to an exception in a background process. See stack trace for root cause.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 59, in <module>
+    main()
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/launchers/api_server/entry.py", line 226, in main
+    uvloop.run(run_server(args))
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+    return __asyncio.run(
+           ^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1515, in uvloop.loop.Loop.run_until_complete
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+    return await main
+           ^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/launchers/api_server/entry.py", line 176, in run_server
+    await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/launchers/api_server/entry.py", line 190, in run_server_worker
+    async with build_async_engine_client(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/launchers/api_server/entry.py", line 60, in build_async_engine_client
+    async with build_async_engine_client_from_engine_args(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/launchers/api_server/entry.py", line 94, in build_async_engine_client_from_engine_args
+    async_llm = AsyncLLM.from_vllm_config(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/async_llm.py", line 264, in from_vllm_config
+    return cls(
+           ^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/async_llm.py", line 193, in __init__
+    self.engine_core = EngineCoreClient.make_async_mp_client(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 170, in make_async_mp_client
+    return AsyncMPClient(
+           ^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 1163, in __init__
+    super().__init__(
+  File "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 764, in __init__
+    raise TimeoutError(
+TimeoutError: Timed out waiting for engine core processes to start. This is often caused by slow weight loading for large models. Waited 600s (configured by VLLM_ENGINE_READY_TIMEOUT_S). To increase the timeout, set the environment variable: VLLM_ENGINE_READY_TIMEOUT_S=<seconds>
+/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/cache/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

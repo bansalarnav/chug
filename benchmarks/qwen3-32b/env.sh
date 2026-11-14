@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+export BENCH_ROOT=${BENCH_ROOT:-/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline}
+export UV_CACHE_DIR="$BENCH_ROOT/cache/uv"
+export UV_PYTHON_INSTALL_DIR="$BENCH_ROOT/cache/python"
+export HF_HOME="$BENCH_ROOT/cache/huggingface"
+export XDG_CACHE_HOME="$BENCH_ROOT/cache"
+export TMPDIR="$BENCH_ROOT/tmp"
+export TRITON_CACHE_DIR="$BENCH_ROOT/cache/triton"
+export CUDA_CACHE_PATH="$BENCH_ROOT/cache/cuda"
+export CUDA_DEVICE_ORDER=PCI_BUS_ID
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+export OMP_NUM_THREADS=4
+export TOKENIZERS_PARALLELISM=false
+export HF_HUB_DISABLE_TELEMETRY=1
+export FLASHINFER_WORKSPACE_BASE="$BENCH_ROOT"
+export TORCH_EXTENSIONS_DIR="$BENCH_ROOT/cache/torch_extensions"
+export MAX_JOBS=4

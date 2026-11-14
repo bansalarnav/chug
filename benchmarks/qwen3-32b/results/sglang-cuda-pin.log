@@ -1,0 +1,23 @@
+Using Python 3.12.15 environment at: /srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/envs/sglang
+Resolved 6 packages in 132ms
+Downloading nvidia-nvvm (58.7MiB)
+Downloading nvidia-cuda-nvcc (35.7MiB)
+Downloading nvidia-cuda-cccl (3.0MiB)
+Downloading nvidia-nvjitlink (38.8MiB)
+ Downloaded nvidia-cuda-cccl
+ Downloaded nvidia-cuda-nvcc
+ Downloaded nvidia-nvjitlink
+ Downloaded nvidia-nvvm
+Prepared 5 packages in 1.25s
+Uninstalled 5 packages in 81ms
+Installed 5 packages in 24ms
+ - nvidia-cuda-cccl==13.3.5.0.6
+ + nvidia-cuda-cccl==13.0.85
+ - nvidia-cuda-crt==13.5.37
+ + nvidia-cuda-crt==13.0.88
+ - nvidia-cuda-nvcc==13.5.37
+ + nvidia-cuda-nvcc==13.0.88
+ - nvidia-nvjitlink==13.5.37
+ + nvidia-nvjitlink==13.0.88
+ - nvidia-nvvm==13.5.37
+ + nvidia-nvvm==13.0.88

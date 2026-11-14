@@ -1,0 +1,106 @@
+2026-11-13T18:39:28.385676+00:00 START vllm-tp4-pp1
+2026-11-13T18:52:48.740746+00:00 READY vllm-tp4-pp1 after 800.3s; benchmarking
+vllm-tp4-pp1: input=128 c=1 trial=0 output_tok/s=28.60
+vllm-tp4-pp1: input=128 c=1 trial=1 output_tok/s=28.57
+vllm-tp4-pp1: input=128 c=1 trial=2 output_tok/s=28.54
+vllm-tp4-pp1: input=128 c=4 trial=0 output_tok/s=107.00
+vllm-tp4-pp1: input=128 c=4 trial=1 output_tok/s=107.14
+vllm-tp4-pp1: input=128 c=4 trial=2 output_tok/s=107.03
+vllm-tp4-pp1: input=1024 c=1 trial=0 output_tok/s=26.48
+vllm-tp4-pp1: input=1024 c=1 trial=1 output_tok/s=26.45
+vllm-tp4-pp1: input=1024 c=1 trial=2 output_tok/s=26.44
+vllm-tp4-pp1: input=1024 c=4 trial=0 output_tok/s=82.29
+vllm-tp4-pp1: input=1024 c=4 trial=1 output_tok/s=79.38
+vllm-tp4-pp1: input=1024 c=4 trial=2 output_tok/s=81.43
+vllm-tp4-pp1: input=2048 c=1 trial=0 output_tok/s=24.22
+vllm-tp4-pp1: input=2048 c=1 trial=1 output_tok/s=24.22
+vllm-tp4-pp1: input=2048 c=1 trial=2 output_tok/s=24.21
+vllm-tp4-pp1: input=2048 c=4 trial=0 output_tok/s=63.67
+vllm-tp4-pp1: input=2048 c=4 trial=1 output_tok/s=63.65
+vllm-tp4-pp1: input=2048 c=4 trial=2 output_tok/s=63.64
+2026-11-13T18:55:28.798746+00:00 COMPLETE vllm-tp4-pp1
+2026-11-13T18:55:45.904325+00:00 START vllm-tp2-pp2
+2026-11-13T19:10:24.336250+00:00 READY vllm-tp2-pp2 after 878.3s; benchmarking
+vllm-tp2-pp2: input=128 c=1 trial=0 output_tok/s=16.94
+vllm-tp2-pp2: input=128 c=1 trial=1 output_tok/s=16.93
+vllm-tp2-pp2: input=128 c=1 trial=2 output_tok/s=16.93
+vllm-tp2-pp2: input=128 c=4 trial=0 output_tok/s=63.39
+vllm-tp2-pp2: input=128 c=4 trial=1 output_tok/s=63.08
+vllm-tp2-pp2: input=128 c=4 trial=2 output_tok/s=62.19
+vllm-tp2-pp2: input=1024 c=1 trial=0 output_tok/s=15.97
+vllm-tp2-pp2: input=1024 c=1 trial=1 output_tok/s=15.97
+vllm-tp2-pp2: input=1024 c=1 trial=2 output_tok/s=15.97
+vllm-tp2-pp2: input=1024 c=4 trial=0 output_tok/s=52.62
+vllm-tp2-pp2: input=1024 c=4 trial=1 output_tok/s=52.58
+vllm-tp2-pp2: input=1024 c=4 trial=2 output_tok/s=52.51
+vllm-tp2-pp2: input=2048 c=1 trial=0 output_tok/s=14.92
+vllm-tp2-pp2: input=2048 c=1 trial=1 output_tok/s=14.92
+vllm-tp2-pp2: input=2048 c=1 trial=2 output_tok/s=14.93
+vllm-tp2-pp2: input=2048 c=4 trial=0 output_tok/s=45.78
+vllm-tp2-pp2: input=2048 c=4 trial=1 output_tok/s=45.66
+vllm-tp2-pp2: input=2048 c=4 trial=2 output_tok/s=45.63
+2026-11-13T19:13:57.739665+00:00 COMPLETE vllm-tp2-pp2
+2026-11-13T19:14:09.434424+00:00 START sglang-tp4-pp1
+2026-11-13T19:14:45.443422+00:00 FAILED sglang-tp4-pp1: Server exited 2
+2026-11-13T19:14:50.608489+00:00 START sglang-tp2-pp2
+2026-11-13T19:14:58.610766+00:00 FAILED sglang-tp2-pp2: Server exited 2
+2026-11-13T19:15:03.725018+00:00 FINISHED configurations; inspect summaries and failure files
+2026-11-13T19:15:43.321196+00:00 SKIP complete vllm-tp4-pp1
+2026-11-13T19:15:43.321516+00:00 SKIP complete vllm-tp2-pp2
+2026-11-13T19:15:43.321772+00:00 START sglang-tp4-pp1
+Interrupted by signal 15
+2026-11-13T19:18:51.539380+00:00 SKIP complete vllm-tp4-pp1
+2026-11-13T19:18:51.539613+00:00 SKIP complete vllm-tp2-pp2
+2026-11-13T19:18:51.539855+00:00 START sglang-tp4-pp1
+2026-11-13T19:30:17.718331+00:00 FAILED sglang-tp4-pp1: Server exited -9
+2026-11-13T19:30:23.104198+00:00 START sglang-tp2-pp2
+Interrupted by signal 15
+2026-11-13T19:33:03.366128+00:00 SKIP complete vllm-tp4-pp1
+2026-11-13T19:33:03.369851+00:00 SKIP complete vllm-tp2-pp2
+2026-11-13T19:33:03.370687+00:00 START sglang-tp4-pp1
+Interrupted by signal 15
+2026-11-13T19:43:59.280689+00:00 SKIP complete vllm-tp4-pp1
+2026-11-13T19:43:59.280913+00:00 SKIP complete vllm-tp2-pp2
+2026-11-13T19:43:59.281648+00:00 START sglang-tp4-pp1
+2026-11-13T19:53:10.541312+00:00 READY sglang-tp4-pp1 after 551.1s; benchmarking
+sglang-tp4-pp1: input=128 c=1 trial=0 output_tok/s=28.27
+sglang-tp4-pp1: input=128 c=1 trial=1 output_tok/s=28.25
+sglang-tp4-pp1: input=128 c=1 trial=2 output_tok/s=28.22
+sglang-tp4-pp1: input=128 c=4 trial=0 output_tok/s=105.42
+sglang-tp4-pp1: input=128 c=4 trial=1 output_tok/s=105.46
+sglang-tp4-pp1: input=128 c=4 trial=2 output_tok/s=105.38
+sglang-tp4-pp1: input=1024 c=1 trial=0 output_tok/s=26.11
+sglang-tp4-pp1: input=1024 c=1 trial=1 output_tok/s=26.10
+sglang-tp4-pp1: input=1024 c=1 trial=2 output_tok/s=26.10
+sglang-tp4-pp1: input=1024 c=4 trial=0 output_tok/s=80.13
+sglang-tp4-pp1: input=1024 c=4 trial=1 output_tok/s=80.47
+sglang-tp4-pp1: input=1024 c=4 trial=2 output_tok/s=80.13
+sglang-tp4-pp1: input=2048 c=1 trial=0 output_tok/s=23.79
+sglang-tp4-pp1: input=2048 c=1 trial=1 output_tok/s=23.78
+sglang-tp4-pp1: input=2048 c=1 trial=2 output_tok/s=23.78
+sglang-tp4-pp1: input=2048 c=4 trial=0 output_tok/s=62.26
+sglang-tp4-pp1: input=2048 c=4 trial=1 output_tok/s=62.21
+sglang-tp4-pp1: input=2048 c=4 trial=2 output_tok/s=62.27
+2026-11-13T19:55:28.421635+00:00 COMPLETE sglang-tp4-pp1
+2026-11-13T19:55:39.664642+00:00 START sglang-tp2-pp2
+2026-11-13T20:01:28.925749+00:00 READY sglang-tp2-pp2 after 349.1s; benchmarking
+sglang-tp2-pp2: input=128 c=1 trial=0 output_tok/s=16.60
+sglang-tp2-pp2: input=128 c=1 trial=1 output_tok/s=16.60
+sglang-tp2-pp2: input=128 c=1 trial=2 output_tok/s=16.58
+sglang-tp2-pp2: input=128 c=4 trial=0 output_tok/s=59.87
+sglang-tp2-pp2: input=128 c=4 trial=1 output_tok/s=59.96
+sglang-tp2-pp2: input=128 c=4 trial=2 output_tok/s=59.80
+sglang-tp2-pp2: input=1024 c=1 trial=0 output_tok/s=15.66
+sglang-tp2-pp2: input=1024 c=1 trial=1 output_tok/s=15.65
+sglang-tp2-pp2: input=1024 c=1 trial=2 output_tok/s=15.66
+sglang-tp2-pp2: input=1024 c=4 trial=0 output_tok/s=51.62
+sglang-tp2-pp2: input=1024 c=4 trial=1 output_tok/s=51.57
+sglang-tp2-pp2: input=1024 c=4 trial=2 output_tok/s=51.54
+sglang-tp2-pp2: input=2048 c=1 trial=0 output_tok/s=14.67
+sglang-tp2-pp2: input=2048 c=1 trial=1 output_tok/s=14.68
+sglang-tp2-pp2: input=2048 c=1 trial=2 output_tok/s=14.68
+sglang-tp2-pp2: input=2048 c=4 trial=0 output_tok/s=46.23
+sglang-tp2-pp2: input=2048 c=4 trial=1 output_tok/s=46.20
+sglang-tp2-pp2: input=2048 c=4 trial=2 output_tok/s=46.18
+2026-11-13T20:05:05.910459+00:00 COMPLETE sglang-tp2-pp2
+2026-11-13T20:05:17.051491+00:00 FINISHED configurations; inspect summaries and failure files

@@ -1,0 +1,16 @@
+[
+  {
+    "microbatch_cap": 2,
+    "start_response": "Start profiling.\n",
+    "diagnostic_requests": 4,
+    "output_tokens": 64,
+    "output_directory": "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/extended-results/profiles/c4-microbatch-2"
+  },
+  {
+    "microbatch_cap": 16,
+    "start_response": "Start profiling.\n",
+    "diagnostic_requests": 4,
+    "output_tokens": 64,
+    "output_directory": "/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/extended-results/profiles/c4-microbatch-16"
+  }
+]

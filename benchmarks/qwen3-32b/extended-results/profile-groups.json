@@ -1,0 +1,53 @@
+[
+  {
+    "profile": "c4-microbatch-16",
+    "files": [
+      "profiles/c4-microbatch-16/c4-mb16-1794609814.3717487-TP-0-PP-0.trace.json.gz",
+      "profiles/c4-microbatch-16/c4-mb16-1794609814.3717487-TP-1-PP-0.trace.json.gz"
+    ],
+    "physical_gpu_ids": [
+      "0",
+      "1"
+    ],
+    "compute_union_us": {
+      "0": 3745768.3012695312,
+      "1": 3766012.3134765625
+    },
+    "communication_union_us": {
+      "0": 3699833.634765625,
+      "1": 3710192.3002929688
+    },
+    "limitation": "Both pipeline stages were not saved; cross-stage overlap cannot be measured."
+  },
+  {
+    "profile": "c4-microbatch-2",
+    "files": [
+      "profiles/c4-microbatch-2/c4-mb2-1794609797.1680415-TP-0-PP-0.trace.json.gz",
+      "profiles/c4-microbatch-2/c4-mb2-1794609797.1680415-TP-0-PP-1.trace.json.gz",
+      "profiles/c4-microbatch-2/c4-mb2-1794609797.1680415-TP-1-PP-0.trace.json.gz",
+      "profiles/c4-microbatch-2/c4-mb2-1794609797.1680415-TP-1-PP-1.trace.json.gz"
+    ],
+    "physical_gpu_ids": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "compute_union_us": {
+      "0": 3726519.5747070312,
+      "2": 3932431.1870117188,
+      "1": 3750165.4213867188,
+      "3": 3929863.9711914062
+    },
+    "communication_union_us": {
+      "0": 3697967.4208984375,
+      "2": 111177.15966796875,
+      "1": 3698849.5786132812,
+      "3": 116691.42431640625
+    },
+    "gpu0_gpu2_compute_overlap_us": 3512837.6147460938,
+    "gpu0_gpu2_compute_union_us": 4146113.1469726562,
+    "gpu0_gpu2_overlap_fraction_of_compute_union": 0.8472604316915573,
+    "overlap_definition": "Non-communication GPU-kernel time intersected across physical GPUs 0 and 2, divided by its union. Includes prefill and instrumented execution; does not measure SM occupancy or causal bubble time."
+  }
+]
