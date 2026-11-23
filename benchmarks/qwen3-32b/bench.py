@@ -16,11 +16,19 @@ import time
 from pathlib import Path
 
 
-def request(port, prompt, output, barrier=None, complete_stream_timing=False):
-    body = json.dumps(dict(model='qwen3-32b', prompt=prompt,
+def request(port, prompt, output, barrier=None, complete_stream_timing=False, request_fields=None, protocol="openai"):
+    payload = dict(model='qwen3-32b', prompt=prompt,
         max_tokens=output, temperature=0, ignore_eos=True, stream=True,
         skip_special_tokens=not complete_stream_timing,
-        stream_options={'include_usage': True}))
+        stream_options={'include_usage': True})
+    payload.update(request_fields or {})
+    endpoint = '/v1/completions'
+    if protocol == 'lmdeploy':
+        endpoint = '/generate'
+        payload['input_ids'] = payload.pop('prompt')
+        payload.pop('model', None)
+        payload.pop('stream_options', None)
+    body = json.dumps(payload)
     connection = http.client.HTTPConnection('127.0.0.1', port, timeout=600)
     connection.connect()
     if barrier:
@@ -31,7 +39,7 @@ def request(port, prompt, output, barrier=None, complete_stream_timing=False):
     chunks = []
     text_parts = []
     try:
-        connection.request('POST', '/v1/completions', body, {'Content-Type':'application/json'})
+        connection.request('POST', endpoint, body, {'Content-Type':'application/json'})
         response = connection.getresponse()
         if response.status != 200:
             raise RuntimeError(f'HTTP {response.status}: {response.read().decode()}')
@@ -46,6 +54,9 @@ def request(port, prompt, output, barrier=None, complete_stream_timing=False):
             event = json.loads(data)
             if event.get('error'):
                 raise RuntimeError(event['error'])
+            if protocol == 'lmdeploy' and 'meta_info' in event:
+                meta = event['meta_info']
+                event = dict(choices=[dict(text=event.get('text',''))], usage={k:meta[k] for k in ['prompt_tokens','completion_tokens']})
             if event.get('usage'):
                 usage = event['usage']
             for choice in event.get('choices', []):
@@ -62,21 +73,21 @@ def request(port, prompt, output, barrier=None, complete_stream_timing=False):
         if usage['prompt_tokens'] != len(prompt) or usage['completion_tokens'] != output:
             raise RuntimeError(f'Token count mismatch: {usage}, expected {len(prompt)}/{output}')
         tpot = ((end if complete_stream_timing else last) - first) / (output - 1)
-        return dict(input_tokens=len(prompt), output_tokens=output,
+        return dict(input_tokens=len(prompt), output_tokens=output, transport_protocol=protocol,
             ttft_s=first-start, e2e_s=end-start, tpot_s=tpot,
             decode_tokens_per_s=1/tpot,
             stream_chunk_times_s=chunks, content_chunks=len(chunks), usage=usage,
             output_sha256=hashlib.sha256(''.join(text_parts).encode()).hexdigest(),
-            output_sample=''.join(text_parts)[:300])
+            output_sample=''.join(text_parts)[:300], output_text=''.join(text_parts))
     finally:
         connection.close()
 
 
-def batch(port, prompts, output, complete_stream_timing=False):
+def batch(port, prompts, output, complete_stream_timing=False, request_fields=None, protocol="openai"):
     barrier = threading.Barrier(len(prompts))
     start = time.perf_counter()
     with concurrent.futures.ThreadPoolExecutor(max_workers=len(prompts)) as pool:
-        futures = [pool.submit(request, port, p, output, barrier, complete_stream_timing) for p in prompts]
+        futures = [pool.submit(request, port, p, output, barrier, complete_stream_timing, request_fields, protocol) for p in prompts]
         rows = [f.result() for f in futures]
     elapsed = time.perf_counter() - start
     return dict(elapsed_s=elapsed,

@@ -4,19 +4,21 @@ The [expanded benchmark](EXTENDED.md) adds 8K prompts, long generation, concurre
 up to 32, continuous-load traces, GPU energy estimates, communication measurements
 and a pipeline microbatch sweep. Its results are in `extended-results/report.md`.
 
+The [additional findings](round3/FINDINGS.md) and [baseline report](round3/REPORT.md) adds numerical fixtures,
+component timings, TurboMind and llama.cpp, arrival-rate traces, cancellation,
+prefix reuse, quantization, speculative decoding and controlled repeats.
+Its [methodology](round3/METHODOLOGY.md) records compatibility limits and fixes.
+
 This benchmark compares BF16 Qwen/Qwen3-32B on bly's four RTX A4500 GPUs.
 Measurements were collected on 2026-11-13. Each engine uses its resolved dependency stack, recorded in full in the results.
 It runs vLLM and SGLang sequentially with TP4 and TP2 × PP2. GPUs 0/1 and
 2/3 are NVLink pairs; the two pairs communicate over PCIe.
 
-All large files live on the HDD at:
-
-```
-/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline
-```
-
-The parent directory permits shared writes. The benchmark directory belongs
-to arnavb9 and has mode 0700. No existing files in that parent are changed.
+The initial HDD location was inside another user's tree and should not have
+been used. At the user's request, the campaign finished there, then
+the entire benchmark tree was deleted after its results were archived and verified. Future
+runs require an explicit `BENCH_ROOT` in storage allocated to your account.
+World-writable permissions do not establish authorization.
 
 ## Workload
 
@@ -62,13 +64,13 @@ and hardware metadata accompany the results. No clock or power limits are change
 Copy the scripts into `$BENCH_ROOT/scripts`, then run on bly:
 
 ```bash
-export BENCH_ROOT=/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline
+export BENCH_ROOT=/path/allocated/to/arnavb9/qwen3-baseline
 bash "$BENCH_ROOT/scripts/setup.sh"
 source "$BENCH_ROOT/scripts/env.sh"
 python3 "$BENCH_ROOT/scripts/run.py"
 ```
 
-`env.sh` supplies the default BENCH_ROOT. Export it before the first command or
+`env.sh` requires an explicit BENCH_ROOT. Export it before the first command or
 invoke the setup script by absolute path. `setup.sh` creates Python 3.12 environments
 with uv. Initial installation pins vLLM 0.33.0 and SGLang 0.5.23 and resolves their published dependencies; preserve and use the
 resulting `results/*-freeze.txt` files to recreate the exact measured dependencies.

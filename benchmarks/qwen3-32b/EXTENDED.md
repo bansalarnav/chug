@@ -105,7 +105,7 @@ prompt measurements test those cases.
 On bly, after the original setup:
 
 ```bash
-export BENCH_ROOT=/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline
+export BENCH_ROOT=/path/allocated/to/arnavb9/qwen3-baseline
 source "$BENCH_ROOT/scripts/env.sh"
 "$BENCH_ROOT/envs/vllm/bin/python" "$BENCH_ROOT/scripts/run_extended.py"
 ```
@@ -154,7 +154,8 @@ run with Python's standard library, without loading PyTorch or Transformers.
 For example, on bly with the future server listening on localhost port 19090:
 
 ```bash
-source /srv/local/bj2/faro/results2/arnavb9-qwen3-baseline/scripts/env.sh
+export BENCH_ROOT=/path/allocated/to/arnavb9/qwen3-baseline
+source "$BENCH_ROOT/scripts/env.sh"
 mkdir -p "$BENCH_ROOT/rust-engine-results"
 cp "$BENCH_ROOT/extended-results/corpus.json" "$BENCH_ROOT/rust-engine-results/corpus.json"
 read -r checkpoint_path < "$BENCH_ROOT/results/model-path.txt"

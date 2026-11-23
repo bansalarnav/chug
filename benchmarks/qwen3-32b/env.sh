@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-export BENCH_ROOT=${BENCH_ROOT:-/srv/local/bj2/faro/results2/arnavb9-qwen3-baseline}
+export BENCH_ROOT=${BENCH_ROOT:?Set BENCH_ROOT to storage allocated to your account}
 export UV_CACHE_DIR="$BENCH_ROOT/cache/uv"
 export UV_PYTHON_INSTALL_DIR="$BENCH_ROOT/cache/python"
 export HF_HOME="$BENCH_ROOT/cache/huggingface"
