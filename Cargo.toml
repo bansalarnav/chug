@@ -3,4 +3,9 @@ name = "chug"
 version = "0.1.0"
 edition = "2024"
 
+[workspace]
+
 [dependencies]
+cuda-device = { git = "https://github.com/NVIDIA/cuda-rust.git", rev = "754b6d10e26919dfb2689d4e1d33da56ad039918" }
+cuda-host = { git = "https://github.com/NVIDIA/cuda-rust.git", rev = "754b6d10e26919dfb2689d4e1d33da56ad039918" }
+cuda-core = { git = "https://github.com/NVIDIA/cuda-rust.git", rev = "754b6d10e26919dfb2689d4e1d33da56ad039918" }

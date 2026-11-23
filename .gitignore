@@ -1,1 +1,8 @@
 /target/
+/.bly-dist/
+/.env.bly
+**/*.bc
+**/*.cubin
+**/*.ltoir
+**/*.nvvm
+**/*.ptx
